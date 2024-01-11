@@ -1,38 +1,134 @@
-.App {
-  text-align: center;
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    background: rgb(48, 47, 47);
+    border-radius: .5rem;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Container{
+    margin-left: 5rem;
+    margin-right: 5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@media screen and (max-width: 726px){
+    .Container{
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.logo-text{
+    font-size: 50px;
+    color: rgb(195, 23, 23);
+    font-weight: 500;
+    margin-left: .5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+menu{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
 }
+
+menu ul{
+    display: flex;
+    color: white;
+    justify-content: center;
+}
+
+/* .nav-link{
+    display: flex;
+    color: white;
+    justify-content: center;
+} */
+
+menu ul li{
+    list-style: none;
+    margin-left: 1rem;
+    cursor: pointer;
+    color: white;
+    
+}
+
+menu ul li:hover{
+    color: red;
+}
+
+.menu-icons{
+    background: transparent;
+    margin: 1rem;
+    display: none;
+}
+
+@media screen and (max-width: 726px){
+    .nav-links{
+        display: none;
+    }
+
+    .menu-icons{
+        display: block;
+    }
+    menu{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    menu ul{
+        margin-left: 0;
+    }
+    #nav-links-mobile{
+     display: block;   
+     list-style: none;
+     position: absolute;
+     top: 70px;
+     left: 0;
+     width: 100%; 
+     background: #222;
+    animation: slide-in .5s ease-in-out;
+    }
+    #nav-links-mobile li{
+        border-bottom: 1px solid #fff;
+        margin-left: 0;
+        margin: 0 30px;
+        padding: 20px 0;
+    }
+
+    .nav-links-mobile-hide{
+        animation: slide-out .5s ease-in-out;
+    }
+
+
+
+    @keyframes slide-in {
+        0%{
+            transform: translateX(-100%);
+        }
+        100%{
+            transform: translateX(0);
+        }
+        
+    }
+    @keyframes slide-out {
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(100%);
+        }
+        
+    }
+    
+}
+
