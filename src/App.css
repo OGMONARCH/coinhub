@@ -1,8 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .navbar{
     display: flex;
     justify-content: space-between;
     height: 5rem;
-    background: rgb(48, 47, 47);
+    background: rgba(36, 36, 36, 0.911);
     border-radius: .5rem;
 
 }
@@ -28,7 +34,7 @@
 
 .logo-text{
     font-size: 50px;
-    color: rgb(195, 23, 23);
+    color: #ff4500;
     font-weight: 500;
     margin-left: .5rem;
 }
@@ -61,7 +67,7 @@ menu ul li{
 }
 
 menu ul li:hover{
-    color: red;
+    color: #ff4500;
 }
 
 .menu-icons{

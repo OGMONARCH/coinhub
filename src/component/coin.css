@@ -1,0 +1,20 @@
+.container{
+    max-width: 1150px;
+    background: black;
+    color: #fff;
+}
+.container h1{
+ text-align: center;
+ margin: 1rem;
+}
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: grey;
+    border-radius: 8px;
+    color: #fff;
+    padding: 10px;
+    box-shadow: 0px 0px 12px #fff;
+}

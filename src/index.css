@@ -3,5 +3,6 @@ html{
 }
 
 .App{
-    background: #111;
+    background: black;
+    height: 200vh;
 }
