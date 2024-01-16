@@ -2,6 +2,8 @@
     max-width: 1150px;
     background: black;
     color: #fff;
+    width: 100%;
+    
 }
 .container h1{
  text-align: center;
@@ -15,6 +17,28 @@
     background: grey;
     border-radius: 8px;
     color: #fff;
-    padding: 10px;
+    padding: 1rem;
     box-shadow: 0px 0px 12px #fff;
+}
+
+.coin-row{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background: grey;
+   border-radius: 8px;
+   color: #fff;
+   padding: .2rem;
+   box-shadow: 0px 0px 12px #fff;
+   margin: 2rem;
+}
+
+.coin-row:hover{
+    cursor: pointer;
+    transform:scale(1.14)
+}
+
+.img-symbol img{
+    width: 100%;
+    height: 20px;
 }

@@ -1,16 +1,16 @@
 import React from 'react'
 import "./coin.css"
-const Coinitem = () => {
+const Coinitem = (props) => {
   return (
     <div className='coin-row'>
-        <p>1</p>
-        <div>
-            <img/>
-            <p>BTC</p>
+        <p>{props.coins.market_cap_rank}</p>
+        <div className='img-symbol'>
+            <img src={props.coins.image}/>
+            <p>{props.coins.symbol }</p>
         </div>
-        <p>$8000</p>
-        <p>6728737</p>
-        <p>68297969</p>
+        <p>{props.coins.price_change_percentage_24h}</p>
+        <p>{props.coins.total_volume}</p>
+        <p>{}</p>
         <p>86532894709</p>
     </div>
   )

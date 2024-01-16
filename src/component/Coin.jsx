@@ -1,7 +1,7 @@
 import React from 'react'
 import "./coin.css"
 import Coinitem from './Coinitem'
-const Coin = () => {
+const Coin = (props) => {
   return (
     <div className='container'>
         <h1>Authorized Coins with current rate</h1>
@@ -13,7 +13,17 @@ const Coin = () => {
             <p>Volume</p>
             <p>Mkt Cap</p>
         </div>
-        <Coinitem />
+
+        {
+            props.coins.map((coin)=>{
+                return(
+                  <Coinitem  key={coin.id} coins={coin}/>
+                )
+            })
+          
+        }
+
+        
     </div>
   )
 }

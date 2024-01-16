@@ -1,4 +1,5 @@
-import React from 'react'
+import {useState, useEffect} from 'react';
+import axios from 'axios';
 
 import image from "../Assets/pierre-borthiry-peiobty-vBCVcWUyvyM-unsplash.jpg"
 import "./Header.css"
@@ -6,6 +7,22 @@ import "./Header.css"
 import Coin from './Coin';
 
 const Header = () => {
+    const [coin, setCoin] = useState([])
+  
+  const URL = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en"
+  //  const URL = "https://api.coingecko.com/api/v3/coins/list"
+    useEffect(() => {
+      axios.get(URL)
+      .then((response)=>{
+          setCoin(response.data)
+      })
+      .catch((error)=>{
+        console.log("Error: ", error);
+      })
+    }, [])
+    
+  
+
   return (
   <section id='header'>
     <div className='header container'>
@@ -29,7 +46,7 @@ const Header = () => {
         <img class="header-img" src={image}></img>
       </div>
     </div>
-    <Coin/>
+    <Coin coins={coin}/>
   </section>
   )
 }
