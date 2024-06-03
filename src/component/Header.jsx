@@ -13,15 +13,13 @@ const Header = () => {
 
     useEffect(() => {
       axios.get(URL)
-      .then((response)=>{
-          setCoin(response.data)
+      .then((res)=>{
+        console.log(res.data)
       })
-      .catch((error)=>{
-        console.log("Error: ", error);
-      })
+
+      
     }, [])
     
-  
 
   return (
   <section id='header'>
